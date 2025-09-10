@@ -1,0 +1,426 @@
+/* Globale Reset & Basisstijlen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    line-height: 1.6;
+    color: #2c3e26;
+    background: linear-gradient(135deg, #f5f3f0 0%, #e8e3dc 100%);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header & Navigatie */
+header {
+    text-align: center;
+    padding: 40px 0;
+    background: linear-gradient(135deg, #8b7355 0%, #a0956b 100%);
+    color: white;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+    border-radius: 15px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.subtitle {
+    font-size: 1.2em;
+    opacity: 0.9;
+    font-style: italic;
+}
+
+.tagline {
+    font-size: 1.1em;
+    color: whitesmoke;
+    margin-top: 10px;
+    font-style: italic;
+    text-align: center;
+}
+
+nav {
+    background: rgba(139, 115, 85, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    backdrop-filter: blur(15px);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px; /* Gecombineerde gap */
+}
+
+nav a {
+    color: #5a4a3a;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #d4c4a8 0%, #e0d5c0 100%);
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    font-weight: 500;
+}
+
+nav a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(139, 115, 85, 0.3);
+    background: linear-gradient(135deg, #c9b896 0%, #d5c9b4 100%);
+}
+
+/* Secties & Titels */
+.section {
+    background: white;
+    margin-bottom: 30px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    border-left: 5px solid #8b7355;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section h2 {
+    color: #5a4a3a;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    border-bottom: 2px solid #d4c4a8;
+    padding-bottom: 10px;
+}
+
+/* Profielfoto's */
+.profile-photo,
+.logo-photo,
+.cartoon-photo {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px solid #8b7355;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transition: all 0.5s ease;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.profile-photo {
+    background-image: url('profielfoto.jpg');
+    font-size: 1.2em;
+    color: #5a4a3a;
+}
+
+.profile-photo.no-image,
+.cartoon-photo.no-image {
+    background: linear-gradient(45deg, #d4c4a8, #e0d5c0);
+}
+
+.logo-photo {
+    background-image: url('main-logo.jpg');
+}
+
+.logo-photo.no-logo {
+    background: linear-gradient(45deg, #d4c4a8, #e0d5c0);
+    font-size: 0.9em;
+    color: #5a4a3a;
+    text-align: center;
+}
+
+.cartoon-photo {
+    background-image: url('profielfoto.cartoon.jpg');
+}
+
+.profile-photo:hover,
+.logo-photo:hover,
+.cartoon-photo:hover {
+    transform: rotate(360deg) scale(1.1);
+    box-shadow: 0 12px 35px rgba(139, 115, 85, 0.4);
+}
+
+/* Hobby's */
+.hobby-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.hobby-card {
+    background: linear-gradient(135deg, #f8f6f3 0%, #ede8e0 100%);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.hobby-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(139, 115, 85, 0.2);
+    border-color: #8b7355;
+}
+
+/* Opleiding & Werkervaring */
+.education-item,
+.work-item {
+    background: #f9f7f4;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    border-left: 4px solid #a0956b;
+    transition: all 0.3s ease;
+}
+
+.education-item:hover,
+.work-item:hover {
+    transform: translateX(10px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.year {
+    color: #8b7355;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.institution {
+    color: #5a4a3a;
+    font-weight: 600;
+}
+
+/* Projecten */
+#projects-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.project-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.project-item h3 {
+    color: #5a4a3a;
+    margin: 0 0 10px 0;
+    font-size: 1.1em;
+}
+
+.project-item p {
+    flex-grow: 1;
+    margin: 0 0 15px 0;
+    line-height: 1.5;
+    color: #666;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: auto;
+    color: #8b7355;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 8px 16px;
+    background: linear-gradient(135deg, #d4c4a8 0%, #e0d5c0 100%);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.project-link:hover {
+    background: linear-gradient(135deg, #c9b896 0%, #d5c9b4 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(139, 115, 85, 0.3);
+    text-decoration: none;
+}
+
+/* Skills */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.skill-tag {
+    background: linear-gradient(135deg, #8b7355 0%, #a0956b 100%);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.skill-tag:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(139, 115, 85, 0.4);
+}
+
+/* Overige Componenten */
+.floating-element {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #8b7355 0%, #a0956b 100%);
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+.floating-element:hover {
+    transform: rotate(180deg) scale(1.2);
+}
+
+.interactive-text {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.interactive-text:hover {
+    color: #8b7355;
+    transform: scale(1.05);
+}
+
+/* Hulpklassen */
+.hidden {
+    display: none;
+}
+
+/* Typemachine Animatie */
+.typewriter {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .05em;
+    animation: typing 3.5s steps(40, end);
+}
+
+/* Verwijderd: blink-caret animatie om herhaaldelijk knipperen te voorkomen.
+   Dit wordt geregeld door de JavaScript-functionaliteit. */
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    text-align: center;
+}
+
+/* de gekleurde box binnen de footer */
+.footer-container {
+    max-width: 1200px;           /* zelfde breedte als je content */
+    margin: 0 auto;              /* centreren */
+    padding: 20px 0;
+    background: linear-gradient(135deg, #8b7355 0%, #a0956b 100%);
+    color: white;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    border-radius: 15px;         /* net als header */
+}
+
+
+/* Responsiviteit */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    header {
+        padding: 30px 0;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+    }
+    
+    .profile-photo,
+    .logo-photo,
+    .cartoon-photo {
+        width: 200px;
+        height: 200px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav a {
+        padding: 10px 20px;
+    }
+    
+    .section {
+        padding: 20px;
+    }
+    
+    .hobby-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    #projects-content {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .project-image {
+        height: 150px;
+    }
+    
+    .project-item {
+        padding: 15px;
+    }
+}

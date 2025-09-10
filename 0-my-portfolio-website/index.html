@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="floating-element" onclick="scrollToTop()">
+        ↑
+    </div>
+
+    <div class="container">
+        <header>
+            <h1 class="typewriter" id="main-title">Portfolio</h1>
+            <p class="subtitle" id="subtitle">Web Developer & Designer</p>
+            <p class="tagline">"Nieuwsgierige Full Stack Developer die houdt van creatieve oplossingen en samenwerken.
+                <br> 20+ jaar ervaring in andere sectoren maak ik nu met plezier impact in de IT-wereld. 💻✨"
+            </p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#about">Over Mij</a></li>
+                <li><a href="#hobbies">Hobby's</a></li>
+                <li><a href="#education">Opleiding</a></li>
+                <li><a href="#experience">Werkervaring</a></li>
+                <li><a href="#skills">Vaardigheden</a></li>
+                <li><a href="#volunteer">Vrijwilligerswerk</a></li>
+                <li><a href="#projects">Projecten</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="section" id="about">
+            <h2>Over Mij</h2>
+            <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin: 30px 0;">
+                <div style="text-align: center;">
+                    <div class="profile-photo" onclick="rotatePhoto()" id="profilePhoto">
+                        <span id="photoText">Foto hier</span>
+                    </div>
+                    <p style="margin-top: 10px; color: #5a4a3a; font-size: 0.9em;">Profiel</p>
+                </div>
+                <div style="text-align: center;">
+                    <div class="logo-photo" onclick="rotateLogo(this)" id="mainLogo">
+                        <span id="logoText" style="display: none;">Logo</span>
+                    </div>
+                    <p style="margin-top: 10px; color: #5a4a3a; font-size: 0.9em;">Logo</p>
+                </div>
+                <div style="text-align: center;">
+                    <div class="cartoon-photo" onclick="rotatePhoto()" id="cartoonPhoto">
+                        <span id="cartoonText">Foto hier</span>
+                    </div>
+                    <p style="margin-top: 10px; color: #5a4a3a; font-size: 0.9em;">Cartoon</p>
+                </div>
+            </div>
+            <div>
+                <p id="about-text">Laden...</p>
+            </div>
+        </div>
+
+        <div class="section hidden" id="hobbies">
+            <h2>Hobby's & Interesses</h2>
+            <div class="hobby-grid" id="hobby-grid">
+                </div>
+        </div>
+
+        <div class="section hidden" id="education">
+            <h2>Opleiding</h2>
+            <div id="education-content">
+                </div>
+        </div>
+
+        <div class="section hidden" id="experience">
+            <h2>Werkervaring</h2>
+            <div id="experience-content">
+                </div>
+        </div>
+
+        <div class="section hidden" id="skills">
+            <h2>Kernvaardigheden</h2>
+            <div id="skills-content">
+                </div>
+        </div>
+
+        <div class="section hidden" id="volunteer">
+            <h2>Vrijwilligerswerk & Maatschappelijke Betrokkenheid</h2>
+            <div id="volunteer-content">
+                </div>
+        </div>
+
+        <div class="section hidden" id="projects">
+            <h2>Projecten</h2>
+            <div id="projects-content">
+                </div>
+        </div>
+
+        <div class="section hidden" id="contact">
+            <h2>Contact & Beschikbaarheid</h2>
+            <div id="contact-content">
+                </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2025 Elvira Mersie Cid. Alle rechten voorbehouden.</p>
+        </div>
+    </footer>
+</body>
+</html>
